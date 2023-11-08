@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div style="width: 1900px;"  v-for="(person, i) in data" :key="i">
+    <div v-for="(person, i) in data" :key="i">
       <Signature :person="person" :html="true" language="nl" />
     </div>
   </div>

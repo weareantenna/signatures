@@ -1,7 +1,7 @@
 <template>
   <div style="display:flex; margin-top: 60px; padding: 0 20px;">
     <br>
-    <div style="display: table;width:600px" ref="html">
+    <div ref="html">
         <table border="0" cellpadding="0" cellspacing="0" id="antenna-sig" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:0px;font-size:1px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse; width:750px;">
             <tbody>
             <tr></tr>
@@ -100,7 +100,7 @@
           return img;
         }
 
-        return '' + img;
+        return 'https://antenna-signatures.netlify.app/' + img;
       },
       hrefify(phone) {
         return 'tel:' + phone.replace(' ', '').replace('(0)','');
