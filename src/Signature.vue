@@ -35,7 +35,7 @@
                             <table border="0" cellpadding="0" cellspacing="0" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;line-height:0px;font-size:1px;padding:0px!important;border-spacing:0px;margin:0px;border-collapse:collapse;">
                                 <tbody>
                                 <tr>
-                                    <td style="border-collapse:collapse;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;font-style:normal;line-height:17px;font-weight:400;padding:0px!important;"><p style="margin: 0.04px;"><span style="font-family:font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline;" v-if="person.phone"><a :href="`tel:${hrefify(person.phone)}`" style="font-family:font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline; text-decoration: none !important;">{{ person.phone }}</a>&nbsp;—&nbsp;</span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline;"><a href="https://goo.gl/maps/bmwdyNeHN6sTxG31A" style="font-family:font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline; text-decoration: none !important;" target="_blank">Farmanstraat 40, 9000 Gent</a></span></p></td>
+                                    <td style="border-collapse:collapse;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:12px;font-style:normal;line-height:17px;font-weight:400;padding:0px!important;"><p style="margin: 0.04px;"><span style="font-family:font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline;" v-if="person.phone"><a :href="`${hrefify(person.phone)}`" style="font-family:font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline; text-decoration: none !important;">{{ person.phone }}</a>&nbsp;—&nbsp;</span><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline;"><a href="https://goo.gl/maps/bmwdyNeHN6sTxG31A" style="font-family:font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; font-style: normal; line-height: 17px; font-weight: 400; color: #2E2E2E; display: inline; text-decoration: none !important;" target="_blank">Farmanstraat 40, 9000 Gent</a></span></p></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -102,7 +102,7 @@
         return 'https://antenna-signatures.netlify.app/' + img;
       },
       hrefify(phone) {
-        return 'tel:' + phone.replace(' ', '').replace('(0)','');
+        return 'tel:' + phone.replaceAll(' ', '').replaceAll('(0)','');
       }
     }
   }
